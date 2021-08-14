@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { login } from '../../data/DataService';
-import { Authenticate, isAuthenticated, ClearAccessToken } from './Auth';
+import { Authenticate } from './Auth';
 
 export default function Login() {
 
@@ -16,17 +16,9 @@ export default function Login() {
 
         login(data).then( res => {
             Authenticate(res.data)
-
-            let { state } = this.props.location;
-
-            if(state && state.from) {
-                window.location = state.from.pathname;
-            } else {
-                window.location = '/dashboard';
-            }
-
+            window.location = '/';
         }).catch( err => {
-            console.log('err:', err)
+            console.log('err:', err);
         })
     }
 

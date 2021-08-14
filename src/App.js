@@ -8,6 +8,7 @@ function App() {
   const routeResult = useRoutes(Routes)
   return (
     <>
+      <h2>Run Planner</h2>
       <Menu />
       { routeResult || <NotFound />}
     </>

@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders title', () => {
   render(<App />);
-  const title = screen.getByText(/Run Planner UI/i);
+  const title = screen.getByText(/dashboard/i);
   expect(title).toBeInTheDocument();
 });

@@ -3,9 +3,9 @@ import React from 'react'
 export default function Menu() {
     return (
         <div className="flex-container">
-            <p>home</p>
-            <p>workouts</p>
-            <p>training</p>
+            <a href="/">dashboard</a>
+            <a href="/about">about</a>
+            <a href="/contact">contact</a>
         </div>
     )
 }

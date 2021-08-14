@@ -11,3 +11,16 @@
   background-color: gray;
   margin: 20px;
 }
+
+a {
+  text-decoration: none;
+  color: azure;
+}
+
+a:hover {
+  color: yellow;
+}
+
+div {
+  padding: 1.5em;
+}

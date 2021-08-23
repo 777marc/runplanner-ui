@@ -6,10 +6,13 @@ export default function Dashboard() {
     const [ workouts, setWorkouts ] = useState([]);
 
     useEffect(() => {
-        get('workouts').then( res => {
-            setWorkouts(res.data.data);
-        })
-    });
+        if (workouts.length === 0) {
+            get('workouts').then( res => {
+                console.dir(res.data.data);
+                setWorkouts(res.data.data);
+            })
+        }
+    }, [workouts]);
 
     return (
         <div>

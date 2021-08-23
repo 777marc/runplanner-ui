@@ -6,6 +6,7 @@ export default function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     const handleLogin = () => {
 
@@ -15,27 +16,33 @@ export default function Login() {
         };
 
         login(data).then( res => {
+            console.log(res.status)
             Authenticate(res.data)
             window.location = '/';
         }).catch( err => {
-            console.log('err:', err);
+            setError(err.message);
         })
     }
 
     return (
         <div>
-            <input 
+            <input
+                className="login"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 placeholder="email"
             />
-            <input 
-                onChange={(e) => setPassword(e.target.value)} 
+            <input
+                className="login"
+                onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 placeholder="password"
+                type="password"
             />
             <button onClick={handleLogin}>Login</button>
-
+            { error && 
+                <p>{error}</p>
+            }
         </div>
     )
 }

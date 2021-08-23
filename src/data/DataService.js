@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = process.env.api_url ? process.env.api_url : 'http://localhost:8001/api/';
+const apiUrl = process.env.api_url ? process.env.api_url : 'http://localhost:8000/api/';
 
 const getAccessToken = () => {
     return localStorage.getItem('access_token');

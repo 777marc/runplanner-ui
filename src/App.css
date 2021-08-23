@@ -24,3 +24,19 @@ a:hover {
 div {
   padding: 1.5em;
 }
+
+.login {
+  background-color: #ebecf0;
+  color: #808080;
+  outline: none;
+  border-radius: 2px;
+  height: 3em;
+  border-style: none;
+  margin: 1em;
+  padding: 0.5em;
+  font-size: larger;
+}
+
+.login:focus {
+  outline: 1px solid #bebebe;
+}

@@ -10,6 +10,11 @@ export default function Login() {
 
     const handleLogin = () => {
 
+        if (!isValid()) {
+            setError('email and password required');
+            return;
+        }
+
         let data = {
             email,
             password
@@ -21,6 +26,13 @@ export default function Login() {
         }).catch( err => {
             setError(err.message);
         })
+    }
+
+    const isValid = () => {
+        if (email.length === 0 || password.length === 0) {
+            return false;
+        }
+        return true;
     }
 
     return (
@@ -40,7 +52,7 @@ export default function Login() {
             />
             <button className="btn-blue" onClick={handleLogin}>Login</button>
             { error && 
-                <p>{error}</p>
+                <p className="error">{error}</p>
             }
         </div>
     )

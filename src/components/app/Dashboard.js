@@ -20,13 +20,11 @@ export default function Dashboard() {
     return (
         <div>
             dashboard {userInfo.name}
-
             { 
                 workouts.map(wo => {
                     return <WorkoutRow workout={wo} />
                 })
             }
-
         </div>
     )
 }

@@ -38,7 +38,7 @@ export default function Login() {
                 placeholder="password"
                 type="password"
             />
-            <button onClick={handleLogin}>Login</button>
+            <button className="btn-blue" onClick={handleLogin}>Login</button>
             { error && 
                 <p>{error}</p>
             }

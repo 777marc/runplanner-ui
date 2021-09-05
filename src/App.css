@@ -40,3 +40,17 @@ div {
 .login:focus {
   outline: 1px solid #bebebe;
 }
+
+.btn-blue {
+  background-color: #add8e6;
+  color: white;
+  outline: none;
+  border-radius: 2px;
+  height: 3.8em;
+  width: 6em;
+  border-style: none;
+  margin: 1em;
+  padding: 0.5em;
+  font-size: larger;
+  font-weight: bold;
+}

@@ -21,7 +21,7 @@ export default function Dashboard() {
 
             { 
                 workouts.map(wo => {
-                    return <p key={wo.id}>wo.name</p>
+                    return <p key={wo.id}>{wo.name}|{wo.duration}|{wo.distance}</p>
                 })
             }
 

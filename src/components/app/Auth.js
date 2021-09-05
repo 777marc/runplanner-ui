@@ -9,7 +9,7 @@ const isAuthenticated = () => {
 const Authenticate = data => {
     console.log(data)
     localStorage.setItem('access_token', data.access_token);
-    localStorage.setItem('user_info', JSON.stringify(data.userInfo));
+    localStorage.setItem('user_info', JSON.stringify(data.user_info));
 } 
  
 const ClearAccessToken = () => {

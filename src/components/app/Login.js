@@ -16,7 +16,6 @@ export default function Login() {
         };
 
         login(data).then( res => {
-            console.log(res.status)
             Authenticate(res.data)
             window.location = '/';
         }).catch( err => {

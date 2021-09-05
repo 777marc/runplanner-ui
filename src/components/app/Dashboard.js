@@ -19,10 +19,10 @@ export default function Dashboard() {
 
     return (
         <div>
-            dashboard {userInfo.name}
+            dashboard: {userInfo.name}
             { 
                 workouts.map(wo => {
-                    return <WorkoutRow workout={wo} />
+                    return <WorkoutRow key={wo.id} workout={wo} />
                 })
             }
         </div>

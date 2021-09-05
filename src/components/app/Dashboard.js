@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react'
 import { get } from '../../data/DataService';
 import { getUserInfo } from './Auth';
+import WorkoutRow  from '../workout/WorkoutRow';
 
 export default function Dashboard() {
 
     const [ workouts, setWorkouts ] = useState([]);
+    const [ userInfo, setUserInfo ] = useState([]);
 
     useEffect(() => {
         if (workouts.length === 0) {
             get('workouts').then( res => {
-                console.dir(getUserInfo());
                 setWorkouts(res.data.data);
+                setUserInfo(getUserInfo());
             })
         }
     }, [workouts]);
 
     return (
         <div>
-            dashboard
+            dashboard {userInfo.name}
 
             { 
                 workouts.map(wo => {
-                    return <p key={wo.id}>{wo.name}|{wo.duration}|{wo.distance}</p>
+                    return <WorkoutRow workout={wo} />
                 })
             }
 

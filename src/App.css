@@ -61,3 +61,13 @@ div {
   color: crimson;
   font-weight: bold;
 }
+
+.workout {
+  background-color: #add8e6;
+  font-size: large;
+  font-weight: bold;
+  color: azure;
+  height: 2em;
+  margin: 1em;
+  padding: 0.25em;
+}

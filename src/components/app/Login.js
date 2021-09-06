@@ -22,7 +22,7 @@ export default function Login() {
 
         login(data).then( res => {
             Authenticate(res.data)
-            window.location = '/';
+            window.location = '/dashboard';
         }).catch( err => {
             setError(err.message);
         })

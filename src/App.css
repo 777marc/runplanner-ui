@@ -71,3 +71,9 @@ div {
   margin: 1em;
   padding: 0.5em;
 }
+
+.menu-highlight {
+  color: lime;
+  border-radius: 5px;
+  background-color: gray;
+}

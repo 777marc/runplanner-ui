@@ -77,3 +77,8 @@ div {
   border-radius: 5px;
   background-color: gray;
 }
+
+.training-plan-row {
+  margin: 1em;
+  background-color: bisque;
+}

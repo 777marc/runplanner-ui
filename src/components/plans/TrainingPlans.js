@@ -17,7 +17,7 @@ export default function TrainingPlans(props) {
 
     return (
         <div>
-            <h2>Training Plan</h2>
+            <h2>Training Plan : { trainingPlan[0].name }</h2>
             { 
                 trainingPlan.map(tp => {
                     return <TrainingPlanRow key={tp.id} data={tp} />
